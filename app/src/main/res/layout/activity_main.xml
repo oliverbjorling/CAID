@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2020 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- The viewfinder camerapreview-->
+    <TextureView
+        android:id="@+id/view_finder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--Display the retrieved color in text-->
+    <TextView
+        android:id="@+id/colorText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="24dp"
+        android:width="@android:dimen/thumbnail_width"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/viga"
+        android:paddingLeft="8dp"
+        android:paddingTop="6dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="6dp"
+        android:text="@string/colorText"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+    <!--Flashbuttons -->
+    <ImageButton
+        android:id="@+id/flashOff"
+        android:layout_width="74dp"
+        android:layout_height="78dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:contentDescription="@string/flashOff"
+        app:srcCompat="@drawable/ic_flash_off" />
+
+    <ImageButton
+        android:id="@+id/flashOn"
+        android:layout_width="74dp"
+        android:layout_height="78dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:contentDescription="@string/flashOff"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_flash_on_white_24dp" />
+    <!--Placeholder asset for displaying the color retrieved from the bitmap in mainActivity -->
+
+    <Button
+        android:id="@+id/buttonDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/colorText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:width="190dp"
+        android:maxHeight="7dip"
+        android:minHeight="7dip" />
+
+</RelativeLayout>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors used in the application-->
+    <color name="strokeColor">#2b2b2b</color>
+    <color name="accent">#2e2e2e</color>
+    <color name="background">#121212</color>
+</resources>
